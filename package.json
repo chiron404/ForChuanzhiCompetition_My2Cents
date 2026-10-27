@@ -1,0 +1,40 @@
+{
+  "name": "blueprint-ai-review",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "evaluate": "tsx scripts/eval.ts",
+    "postinstall": "node scripts/copy-pdf-worker.mjs && node scripts/write-sample.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zustand": "^5.0.8",
+    "zod": "^4.1.12",
+    "lucide-react": "^0.468.0",
+    "mammoth": "^1.11.0",
+    "pdfjs-dist": "^5.4.296",
+    "idb-keyval": "^6.2.2",
+    "jsonrepair": "^3.13.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.16",
+    "@tailwindcss/postcss": "^4.1.16",
+    "vitest": "^3.2.4",
+    "tsx": "^4.20.6"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "packageManager": "pnpm@11.25.0"
+}
